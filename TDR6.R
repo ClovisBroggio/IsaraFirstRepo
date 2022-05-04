@@ -30,3 +30,28 @@ apply(iris1[,1:4], MARGIN=2, mean) # calcul la moyenne des colonnes de 1:4, fonc
 tapply(iris1$SepalLength, iris1$Species, mean) # calcul la moyenne spécifique de chacunes des espèces
 
 
+
+# Exercice 3
+
+slv <- iris1$SepalLength[iris1$Species=="virginica"]
+slv
+
+mean(slv) # fait la moyenne de slv
+var(slv) # calcule la variance
+sqrt(var(slv)) # calcule l'écart type
+sd(slv) # calcule l'écart type directement sans faire le calcule (racine carrée de la variance)
+min(slv) # indique la valeur minimale de slv
+max(slv) # indique la valeur maximale de slv
+range(slv) # indique la valeur minimale et maximale de slv
+sort(slv) # classe l'ensemble des valeurs de slv du plus petit au plus grand
+rev(slv) # je ne comprends pas
+sum(slv) # calcule la somme des valeurs de slv
+cumsum(slv) # calcule la somme des valeurs de slv en ajoutant 1 valeur par une valeur à la façon d'une suite
+median(slv) # indique la valeur médianne de slv
+quantile(slv,0.25) # indique le quantile à 0,25%
+quantile(slv) # indique part défaut tous les quantiles (0% / 25% / 50% / 75% / 100%)
+length(slv) # indique le nombre de valeur dans slv
+
+
+
+
