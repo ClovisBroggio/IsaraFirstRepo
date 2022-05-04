@@ -127,9 +127,16 @@ t3var[t3var$tai > 170  &  t3var$sexe=="f", ]
 
 t3var[c(10:20), -1]
 
-f_sup_mean <- t3var[t3var$tai > mean(t3var$sexe=="f")  &  t3var$sexe=="f", ]
+
+f_sup_mean <- t3var[t3var$tai > mean(t3var$tai[t3var$sexe=="f"])  &  t3var$sexe=="f", ]
 f_sup_mean
 length(f_sup_mean$sexe)
 
 mean(t3var$poi)
-mean(t3var$poi,  )
+
+mean(t3var$poi[t3var$sexe=="f"])
+mean(t3var$poi[t3var$sexe=="h"])
+
+var(t3var$poi[t3var$sexe=="f"])
+var(t3var$poi[t3var$sexe=="h"])
+
